@@ -13,6 +13,22 @@
             // because it allows to hide the implementation details and show only the essential features of an object, making it easier to understand and reuse
 
             #endregion
+
+            #region Q2
+
+            // a)  What is the difference between an Abstract Class and an Interface?
+            // abstract class can have concrete methods ,events, properties and fields , interface have only abstract methods, events, properties and fields
+
+            // b)  When would you choose an Interface instead of an Abstract Class?
+            // interface provide multiple inheritance and loose coupling , abstract class provide single inheritance which is harder to test and reuse
+
+            // c)  Can a class inherit from multiple abstract classes? Can it implement multiple interfaces?
+            // a class can inherit only one class but can implement multiple interfaces
+
+
+            #endregion
+
+
         }
     }
 }
