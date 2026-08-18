@@ -1,4 +1,7 @@
-﻿namespace OOP05
+﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace OOP05
 {
     internal class Program
     {
@@ -66,6 +69,47 @@
             #region Q3.7
 
             // 7  Update DeliveryCenter
+
+            #endregion
+
+            #region Q3.8
+            // main
+
+            // Create one StandardShipment.
+            StandardShipment s = new StandardShipment("SH001","Laptop",7,45,new DeliveryAddress("cairo","zayed",842));
+
+            // Create one ExpressShipment.
+            ExpressShipment e = new ExpressShipment("SH001", "Laptop", 7, 45, new DeliveryAddress("cairo", "zayed", 842),55);
+
+            // Create one InternationalShipment.
+            InternationalShipment i = new InternationalShipment("SH001", "Laptop", 7, 45, new DeliveryAddress("cairo", "zayed", 842),"france",555);
+
+            // Add all shipments to the DeliveryCenter.
+
+            DeliveryCenter deliveryCenter = new DeliveryCenter("KK",new Driver("ahmed","445555",455));
+            deliveryCenter.AddShipment(i);
+            deliveryCenter.AddShipment(s);
+            deliveryCenter.AddShipment(e);
+
+            i.PrintShipment();
+            e.PrintShipment();
+            s.PrintShipment();
+
+            DeliveryReport deliveryReport = new DeliveryReport();
+            deliveryReport.PrintInsurance(i);
+            deliveryReport.PrintInsurance(s);
+            deliveryReport.PrintInsurance(e);
+
+            deliveryReport.PrintShipment(i);
+            deliveryReport.PrintShipment(s);
+            deliveryReport.PrintShipment(e);
+
+
+            // مش عارفة اعمل دول ازاي
+
+//            ☐  h.Store the shipment objects in an ITrackable[] array and print their tracking statuses.
+//☐  i.Store the shipment objects in an IInsurable[] array and print their insurance values.
+
 
             #endregion
         }
