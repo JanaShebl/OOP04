@@ -95,5 +95,16 @@ namespace OOP05
             Driver = driver;
         }
 
+        // it loops through all shipments and prints their tracking status using the ITrackable interface.
+
+        public void PrintTrackingStatuses()
+        {
+            foreach(ITrackable i in shipments)
+            {
+                Console.WriteLine(i.GetTrackingStatus);
+            }
+        }
+        
+
     }
 }

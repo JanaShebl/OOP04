@@ -62,6 +62,12 @@
             // 6  Create DeliveryReport
 
             #endregion
+
+            #region Q3.7
+
+            // 7  Update DeliveryCenter
+
+            #endregion
         }
     }
 }
