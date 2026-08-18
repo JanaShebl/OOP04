@@ -13,10 +13,24 @@ namespace OOP05
 
         }
 
+        //public override void PrintShipment()
+        //{
+        //    Console.WriteLine("Standard Shipment\n");
+        //    base.PrintShipment();
+        //}
+
         public override void PrintShipment()
         {
-            Console.WriteLine("Standard Shipment\n");
-            base.PrintShipment();
+            Console.WriteLine($"Tracking Code: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Weight: {Weight} KG");
+            Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
+            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        }
+        public override decimal EstimatedCost()
+        {
+            return DeliveryFee;
         }
     }
 }

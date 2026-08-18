@@ -88,10 +88,10 @@ namespace OOP05
         }
 
         // كنت عملاها من الاسايمنت اللي فات virtual عشان اقدر اعمل override في ال InternationalShipment
-        public virtual decimal EstimatedCost
-        {
-            get { return DeliveryFee + (decimal)(Weight * 5); }
-        }
+        //public virtual decimal EstimatedCost
+        //{
+        //    get { return DeliveryFee + (decimal)(Weight * 5); }
+        //}
 
         // The first constructor receives only trackingCode.
         public Shipment(string trackingCode)
@@ -134,15 +134,15 @@ namespace OOP05
 
         // • PrintShipment(): prints all shipment information, including the estimated cost. 
         // كنت عملتها virtual عشان اقدر اعمل override من الاسايمنت اللي فات
-        public virtual void PrintShipment()
-        {
-            Console.WriteLine($"Tracking Code: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight} KG");
-            Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
-        }
+        //public virtual void PrintShipment()
+        //{
+        //    Console.WriteLine($"Tracking Code: {TrackingCode}");
+        //    Console.WriteLine($"Description: {Description}");
+        //    Console.WriteLine($"Weight: {Weight} KG");
+        //    Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
+        //    Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+        //    Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        //}
 
         public void UpdateWeight(double newWeight)
         {
@@ -153,6 +153,9 @@ namespace OOP05
             Weight = newWeight + extraWeight;
         }
 
+        public abstract decimal EstimatedCost();
+
+        public abstract void PrintShipment();
 
     }
 }

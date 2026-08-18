@@ -22,9 +22,14 @@ namespace OOP05
 
         // Override the EstimatedCost property to include the extra fee.
         // Override EstimatedCost
-        public override decimal EstimatedCost
+        //public override decimal EstimatedCost
+        //{
+        //    get { return DeliveryFee + (decimal)(Weight * 5) + ExtraFee; }
+        //}
+
+        public override decimal EstimatedCost()
         {
-            get { return DeliveryFee + (decimal)(Weight * 5) + ExtraFee; }
+            return DeliveryFee + (decimal)(Weight * 5) + ExtraFee;
         }
 
         // Create a constructor that initializes all inherited members and ExtraFee.
@@ -33,10 +38,22 @@ namespace OOP05
             ExtraFee = extraFee;
         }
 
+        //public override void PrintShipment()
+        //{
+        //    Console.WriteLine("Express Shipment\n");
+        //    base.PrintShipment();
+        //    Console.WriteLine($"Extra Fee     : {ExtraFee} EGP");
+        //}
+
         public override void PrintShipment()
         {
             Console.WriteLine("Express Shipment\n");
-            base.PrintShipment();
+            Console.WriteLine($"Tracking Code: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Weight: {Weight} KG");
+            Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
+            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
             Console.WriteLine($"Extra Fee     : {ExtraFee} EGP");
         }
     }

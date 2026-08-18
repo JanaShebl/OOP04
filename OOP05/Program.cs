@@ -37,6 +37,13 @@
             // Convert Shipment into an Abstract Class
 
             #endregion
+
+            #region Q3.2,3
+
+            // 2  Create Abstract Members
+            // 3  Update All Shipment Types
+
+            #endregion
         }
     }
 }
