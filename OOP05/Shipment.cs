@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP05
 {
-    internal class Shipment
+    internal abstract class Shipment
     {
         private string trackingCode;
         private string description;
