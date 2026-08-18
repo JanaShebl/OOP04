@@ -50,6 +50,12 @@
             // create ITrackable
 
             #endregion
+
+            #region Q3.5
+
+            // create IInsurable
+
+            #endregion
         }
     }
 }

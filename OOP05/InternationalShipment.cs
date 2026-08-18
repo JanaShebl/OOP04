@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP05
 {
-    internal class InternationalShipment : Shipment
+    internal class InternationalShipment : Shipment,IInsurable
     {
         string _destinationCountry;
         decimal _customsFee;
@@ -90,6 +90,10 @@ namespace OOP05
             Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
             Console.WriteLine($"Destination Country: {DestinationCountry}");
             Console.WriteLine($"Customs Fee: {CustomsFee} EGP");
+        }
+        public decimal CalculateInsurance()
+        {
+            return 0.12m * EstimatedCost();
         }
     }
 }

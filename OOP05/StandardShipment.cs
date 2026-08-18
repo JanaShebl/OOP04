@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP05
 {
-    internal class StandardShipment : Shipment
+    internal class StandardShipment : Shipment, IInsurable
     {
         // Create a constructor that initializes all inherited members using constructor chaining. 
         // constructor chaining is done by calling the base class
@@ -42,5 +42,9 @@ Shipment SH003 has been Delivered.
         //{
 
         //}
+        public decimal CalculateInsurance()
+        {
+            return 0.05m * EstimatedCost();
+        }
     }
 }

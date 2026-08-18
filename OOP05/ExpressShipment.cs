@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP05
 {
-    internal class ExpressShipment : Shipment
+    internal class ExpressShipment : Shipment , IInsurable
     {
         decimal _extraFee;
         // ExtraFee must be greater than or equal to 0. 
@@ -55,6 +55,10 @@ namespace OOP05
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
             Console.WriteLine($"Extra Fee     : {ExtraFee} EGP");
+        }
+        public decimal CalculateInsurance()
+        {
+            return 0.08m * EstimatedCost();
         }
     }
 }
