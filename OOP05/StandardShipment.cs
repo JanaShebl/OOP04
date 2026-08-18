@@ -32,5 +32,15 @@ namespace OOP05
         {
             return DeliveryFee;
         }
+
+        /*Every shipment type implements this interface. Example outputs:
+Shipment SH001 is Ready.
+Shipment SH002 is Out for Delivery.
+Shipment SH003 has been Delivered.
+*/
+        //public string GetTrackingStatus()
+        //{
+
+        //}
     }
 }

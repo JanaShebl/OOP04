@@ -4,13 +4,16 @@ using System.Text;
 
 namespace OOP05
 {
-    internal abstract class Shipment
+    internal abstract class Shipment : ITrackable
     {
         private string trackingCode;
         private string description;
         private double weight;
         private decimal deliveryFee;
         private DeliveryAddress destination;
+        //private string _status;
+
+        public string Status { get; set; }
 
 
         public string TrackingCode
@@ -157,5 +160,11 @@ namespace OOP05
 
         public abstract void PrintShipment();
 
+        public string GetTrackingStatus()
+        {
+            return $"Tracking Code: {TrackingCode}, Status: {Status}";
+        }
     }
+
+
 }
