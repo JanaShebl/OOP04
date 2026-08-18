@@ -56,6 +56,12 @@
             // create IInsurable
 
             #endregion
+
+            #region Q3.6
+
+            // 6  Create DeliveryReport
+
+            #endregion
         }
     }
 }
